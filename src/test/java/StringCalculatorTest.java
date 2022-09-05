@@ -1,20 +1,15 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorTest {
-    @Test
-    void given_1_returns_1() {
-        assertEquals(1, new StringCalculator().add("1"));
-    }
 
-    @Test
-    void given_2_returns_2() {
-        assertEquals(2, new StringCalculator().add("2"));
-    }
-    @Test
-    void given_3_returns_3() {
-        assertEquals(3, new StringCalculator().add("3"));
+    @ParameterizedTest
+    @CsvSource({"1,1", "2,2", "3,3"})
+    void given_a_string_number_returns_an_integer(String input, int output) {
+        assertEquals(output, new StringCalculator().add(input));
     }
 
 }
