@@ -1,5 +1,5 @@
 public class StringCalculator {
     public int add(String numbers) {
-        throw new UnsupportedOperationException();
+        return 1;
     }
 }
