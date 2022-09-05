@@ -17,8 +17,24 @@ class StringCalculatorTest {
         assertEquals(0, new StringCalculator().add(""));
     }
     @Test
-    void add_two_numbers_together() {
-        assertEquals(3, new StringCalculator().add("1, 2"));
+    void add_1_and_2_together() {
+        assertEquals(3, new StringCalculator().add("1,2"));
     }
+
+    @Test
+    void add_4_and_7_together() {
+        assertEquals(11, new StringCalculator().add("4,7"));
+    }
+
+    @Test
+    void add_2_and_4_together() {
+        assertEquals(6, new StringCalculator().add("2,4"));
+    }
+
+//    @ParameterizedTest
+//    @CsvSource({"1,2,3", "4,7,11", "2,4,6"})
+//    void add_two_numbers_together(String input1, String input2, int Output) {
+//        assertEquals(Output, new StringCalculator().add(input1 + "," + input2));
+//    }
 
 }
