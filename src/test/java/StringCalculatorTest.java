@@ -16,5 +16,9 @@ class StringCalculatorTest {
     void empty_string_returns_0() {
         assertEquals(0, new StringCalculator().add(""));
     }
+    @Test
+    void add_two_numbers_together() {
+        assertEquals(3, new StringCalculator().add("1, 2"));
+    }
 
 }
