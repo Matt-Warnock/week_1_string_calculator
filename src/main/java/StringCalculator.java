@@ -1,9 +1,10 @@
 public class StringCalculator {
     public int add(String numbers) {
+        if (numbers.equals("")) {
+            return 0;
+        }
 
-        int convertedNumber = Integer.parseInt(numbers);
-
-        return convertedNumber;
+        return Integer.parseInt(numbers);
 
     }
 }
