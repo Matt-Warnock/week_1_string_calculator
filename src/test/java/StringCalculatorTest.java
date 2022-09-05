@@ -12,4 +12,9 @@ class StringCalculatorTest {
         assertEquals(output, new StringCalculator().add(input));
     }
 
+    @Test
+    void empty_string_returns_0() {
+        assertEquals(0, new StringCalculator().add(""));
+    }
+
 }
