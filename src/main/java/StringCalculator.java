@@ -4,19 +4,18 @@ public class StringCalculator {
             return 0;
         }
 
-        if (numbers == "1,2") {
-            return 3;
-        }
+        if (numbers.length() == 3) {
+            int value1 = charToInt(numbers.charAt(0));
+            int value2 = charToInt(numbers.charAt(2));
 
-        if (numbers == "4,7") {
-            return 11;
-        }
-
-        if (numbers == "2,4") {
-            return 6;
+            return value1 + value2;
         }
 
         return Integer.parseInt(numbers);
 
+    }
+
+    private static int charToInt(char value) {
+        return Character.getNumericValue(value);
     }
 }
